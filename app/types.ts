@@ -15,15 +15,17 @@ export type HeaderType = {
 	className?: string;
 };
 
-export type ButtonLinkType = {
+export type ItemType = {
 	name?: string | JSX.Element;
 	className?: string;
-	download?: true | false;
-	primary?: true | false;
-	url: string;
+	download?: true;
+	primary?: true;
+	url?: string;
 	redirect?: string;
-	footer?: true | false;
+	footer?: true;
 	icon?: "tiktok" | "instagram" | "facebook" | "email" | "whatsapp";
+	group?: ItemType[];
+	spaceless?: true;
 };
 
 export type AppDataType = {
@@ -31,5 +33,5 @@ export type AppDataType = {
 	backdrop?: BackdropType;
 	container?: { className: string };
 	header: HeaderType;
-	links: ButtonLinkType[];
+	links: ItemType[];
 };

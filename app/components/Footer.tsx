@@ -5,22 +5,25 @@ import {
 	FaWhatsapp as WhatsApp,
 } from "react-icons/fa";
 import { HiOutlineMail as Email } from "react-icons/hi";
-import { ButtonLinkType } from "~/types";
+import { ItemType } from "~/types";
 import { ButtonLink } from "./ButtonLinks";
 
-export default function Footer({ footerLinks }: { footerLinks: ButtonLinkType[] }) {
+export default function Footer({ footerLinks }: { footerLinks: ItemType[] }) {
 	return (
 		<div className="footer">
-			{footerLinks.map((icon, index) => (
-				<IconLink icon={icon.icon} url={icon.url} key={index} />
-			))}
+			{footerLinks.map((icon, index) =>
+				// <IconLink icon={icon.icon} url={icon.url} key={index} />
+				icon.icon ? (
+					<ButtonLink
+						{...icon}
+						name={icons[icon.icon]}
+						key={index}
+						className={`icon-link`}
+					/>
+				) : null
+			)}
 		</div>
 	);
-}
-
-export function IconLink({ icon, url, className = "" }: ButtonLinkType) {
-	if (!icon) throw new Error("'icon' não está definindo");
-	return <ButtonLink name={icons[icon]} className={`icon-link ${className}`} url={url} />;
 }
 
 let icons = {

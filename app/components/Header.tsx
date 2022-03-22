@@ -5,7 +5,14 @@ export default function Header({ name, logo, className, excerpt }: HeaderType) {
 		<div className={`header ${className}`}>
 			{logo && (
 				<div className={logo.className}>
-					{logo.url ? <img src={logo.url} /> : logo.component}
+					{logo.url ? (
+						<img
+							src={logo.url}
+							alt={typeof name === "string" ? name : "Logotipo"}
+						/>
+					) : (
+						logo.component
+					)}
 				</div>
 			)}
 			{name &&

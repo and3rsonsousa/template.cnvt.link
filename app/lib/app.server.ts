@@ -6,11 +6,11 @@ export function getAppData() {
 		// className 	=>	classes aplicadas ao compomponent <App></App>
 		app: {
 			name: "cnvt.link",
-			className: "font-light antialiased bg-gray-100",
+			className: "bg-gray-100",
 		},
 		container: {
 			className:
-				"px-16 py-12 bg-white shadow shadow-gray-300/50 rounded-xl",
+				"px-16 py-12 bg-gray-50 shadow shadow-gray-300/50 rounded-xl",
 		},
 		// Ordem de aparição
 		// LOGO | NOME | EXCERT
@@ -50,6 +50,21 @@ export function getAppData() {
 				redirect: "",
 			},
 			{
+				group: [
+					{
+						name: `<span class='text-sm uppercase font-medium'>Grupo de</span><br/><span class='text-xl'>Botões</span>`,
+						url: "botao-comum",
+						redirect: "",
+						primary: true,
+					},
+					{
+						name: `<span class='text-sm uppercase font-medium'>Usando</span><br/><span class='text-xl'>HTML</span>`,
+						url: "botao-comum",
+						redirect: "",
+					},
+				],
+			},
+			{
 				name: "Botão com link",
 				url: "https://cnvt.link",
 			},
@@ -58,6 +73,24 @@ export function getAppData() {
 				url: "/seo.jpg",
 				download: true,
 			},
+			{
+				name: `Também é posível inserir um texto entre os botões<br/>e usar códigos <strong>HTML</strong> para direcionar a atenção<br/><span class="text-xs">Use esses comandos com sabedoria.</span><br/><h3 class="text-xl font-bold text-gray-700 my-4">Divisão de Categoria</h3><hr/>`,
+			},
+			{
+				spaceless: true,
+				group: [
+					{
+						name: "Outro grupo",
+						url: "",
+					},
+					{
+						name: "Sem espaço",
+						url: "",
+					},
+				],
+			},
+
+			//Botões Footer
 			{
 				icon: "tiktok",
 				url: "https://tiktok.com/@agenciacanivete",
