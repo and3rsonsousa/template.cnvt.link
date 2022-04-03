@@ -41,6 +41,10 @@
 	@apply bg-brand-2 hover:text-white hover:bg-brand-3 active:bg-brand-3 my-2 py-4  text-xl text-white active:duration-75 leading-none;
 }
 
+.button-alternative {
+	@apply bg-brand-3 hover:text-white hover:bg-brand-2 active:bg-brand-2 my-2 py-4  text-xl text-white active:duration-75 leading-none;
+}
+
 .group > .button:first-child {
 	@apply rounded-r-none mr-0;
 }

@@ -19,7 +19,7 @@ export type ItemType = {
 	name?: string | JSX.Element;
 	className?: string;
 	download?: true;
-	primary?: true;
+	type?: "primary" | "alternative";
 	url?: string;
 	redirect?: string;
 	footer?: true;

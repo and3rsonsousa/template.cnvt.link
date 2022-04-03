@@ -7,10 +7,10 @@ module.exports = {
 			colors: {
 				gray: colors.slate,
 				brand: {
-					1: "#CCFFE1",
-					2: "#2AAD9D",
-					3: "#1C6A72",
-					4: "#138",
+					1: "#0CE9DB",
+					2: "#8001FF",
+					3: "#FF6E4E",
+					4: "#0F1729",
 				},
 			},
 		},
